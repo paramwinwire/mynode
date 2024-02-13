@@ -1,0 +1,20 @@
+name: Docker Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t your-image-name .
+
+    - name: Run Docker container
+      run: docker run -p 3000:3000 -d your-image-name
