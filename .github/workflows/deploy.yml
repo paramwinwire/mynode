@@ -24,7 +24,9 @@ jobs:
     - name: Run Docker container
       run: docker run -p 3000:3000 -d mynode > output.log 2>&1
 
-  
+    - name: Wait for container to start
+      run: sleep 10
+      
     - name: Display container output
       run: |
         cat output.log
