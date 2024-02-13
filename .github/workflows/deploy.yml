@@ -26,4 +26,6 @@ jobs:
 
   
     - name: Display container output
-      run: cat output.log
+      run: |
+        cat output.log
+        curl http://localhost:3000
