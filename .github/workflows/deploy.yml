@@ -22,4 +22,8 @@ jobs:
         docker build -t mynode .
 
     - name: Run Docker container
-      run: docker run -p 3000:3000 -d mynode
+      run: docker run -p 3000:3000 -d mynode > output.log 2>&1
+
+  
+    - name: Display container output
+      run: cat output.log
