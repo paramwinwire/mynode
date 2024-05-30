@@ -9,7 +9,7 @@ on:
       type: 
         description: 'type of environment'
         default: try
-        required: false
+        required: true
 
 jobs:
   build:
