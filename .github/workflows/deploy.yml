@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       type: 
-      description: 'type of environment'
-      default: try
-      required: false
+        description: 'type of environment'
+        default: try
+        required: false
 
 jobs:
   build:
